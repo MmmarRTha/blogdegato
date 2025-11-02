@@ -275,20 +275,45 @@ p {
 
 .site-footer {
     background-color: #8a4b4b;
-    padding: 3rem;
+    padding: 2rem;
     margin-top: 4rem;
+    color: #ffff;
 }
 
-.site-footer p {
+.site-footer p span{
     color: #ffff;
-    font-size: 4rem;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 700;
     font-family: 'PT Sans', sans-serif;
     text-align: center;
 }
 
-.site-footer p span {
-    font-weight: 700;
+.site-footer p a {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.site-footer p a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.site-footer p a:hover::after {
+    width: 100%;
+}
+
+.site-footer p a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 
